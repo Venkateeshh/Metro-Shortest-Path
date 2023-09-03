@@ -1,65 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <title>Banglore Metro </title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <h1>Banglore Metro's</h1>
-    <div class="form">
-      <label for="source">Source Station:</label>
-      <select id="source">
-        <option value="">Select Source Station</option>
-        <option value="Namma Metro Station">Namma Metro Station</option>
-        <option value="MG Road Station">MG Road Station</option>
-        <option value="Jayanagar Station">Jayanagar Station</option>
-        <option value="Lakshmi Nagar Station">Lakshmi Nagar Station</option>
-        <option value="Peenya Industry Station">Peenya Industry Station</option>
-        <option value="Banashankari Station">Banashankari Station</option>
-        <option value="Indiranagar Station">Indiranagar Station</option>
-        <option value="Yelachenahalli Station">Yelachenahalli Station</option>
-        <option value="Silk Board Station">Silk Board Station</option>
-        <option value="KR Puram Station">KR Puram Station</option>
-        <option value="Hosahalli Station">Hosahalli Station</option>
-        <option value="Sarjapur Road Station">Sarjapur Road Station</option>
-        <option value="Kengeri Station">Kengeri Station</option>
-        <option value="Yelagirinagar Station">Yelagirinagar Station</option>
-        <option value="Mahadevapura Station">Mahadevapura Station</option>
-        <option value="Hosakote Station">Hosakote Station</option>
-        <option value="Attibele Station">Attibele Station</option>
-        <!-- Add more source stations if needed -->
-      </select>
-      <label for="destination">Destination Station:</label>
-      <select id="destination">
-        <option value="">Select Destination Station</option>
-        <option value="Namma Metro Station">Namma Metro Station</option>
-        <option value="MG Road Station">MG Road Station</option>
-        <option value="Jayanagar Station">Jayanagar Station</option>
-        <option value="Lakshmi Nagar Station">Lakshmi Nagar Station</option>
-        <option value="Peenya Industry Station">Peenya Industry Station</option>
-        <option value="Banashankari Station">Banashankari Station</option>
-        <option value="Indiranagar Station">Indiranagar Station</option>
-        <option value="Yelachenahalli Station">Yelachenahalli Station</option>
-        <option value="Silk Board Station">Silk Board Station</option>
-        <option value="KR Puram Station">KR Puram Station</option>
-        <option value="Hosahalli Station">Hosahalli Station</option>
-        <option value="Sarjapur Road Station">Sarjapur Road Station</option>
-        <option value="Kengeri Station">Kengeri Station</option>
-        <option value="Yelagirinagar Station">Yelagirinagar Station</option>
-        <option value="Mahadevapura Station">Mahadevapura Station</option>
-        <option value="Hosakote Station">Hosakote Station</option>
-        <option value="Attibele Station">Attibele Station</option>
-        <!-- Add more destination stations if needed -->
-      </select>
-      <input type="button" value="Calculate" onclick="calculate()">
+  <head>
+    <title>Banglore Metro</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Banglore Metro's</h1>
+      <div class="form">
+        <label for="source">Source Station:</label>
+        <select id="source">
+          <option value="">Select Source Station</option>
+          <option value="Namma Metro Station">Namma Metro Station</option>
+          <option value="MG Road Station">MG Road Station</option>
+          <option value="Jayanagar Station">Jayanagar Station</option>
+          <option value="Lakshmi Nagar Station">Lakshmi Nagar Station</option>
+          <option value="Peenya Industry Station">
+            Peenya Industry Station
+          </option>
+          <option value="Banashankari Station">Banashankari Station</option>
+          <option value="Indiranagar Station">Indiranagar Station</option>
+          <option value="Yelachenahalli Station">Yelachenahalli Station</option>
+          <option value="Silk Board Station">Silk Board Station</option>
+          <option value="KR Puram Station">KR Puram Station</option>
+          <option value="Hosahalli Station">Hosahalli Station</option>
+          <option value="Sarjapur Road Station">Sarjapur Road Station</option>
+          <option value="Kengeri Station">Kengeri Station</option>
+          <option value="Yelagirinagar Station">Yelagirinagar Station</option>
+          <option value="Mahadevapura Station">Mahadevapura Station</option>
+          <option value="Hosakote Station">Hosakote Station</option>
+          <option value="Attibele Station">Attibele Station</option>
+          <!-- Add more source stations if needed -->
+        </select>
+        <label for="destination">Destination Station:</label>
+        <select id="destination">
+          <option value="">Select Destination Station</option>
+          <option value="Namma Metro Station">Namma Metro Station</option>
+          <option value="MG Road Station">MG Road Station</option>
+          <option value="Jayanagar Station">Jayanagar Station</option>
+          <option value="Lakshmi Nagar Station">Lakshmi Nagar Station</option>
+          <option value="Peenya Industry Station">
+            Peenya Industry Station
+          </option>
+          <option value="Banashankari Station">Banashankari Station</option>
+          <option value="Indiranagar Station">Indiranagar Station</option>
+          <option value="Yelachenahalli Station">Yelachenahalli Station</option>
+          <option value="Silk Board Station">Silk Board Station</option>
+          <option value="KR Puram Station">KR Puram Station</option>
+          <option value="Hosahalli Station">Hosahalli Station</option>
+          <option value="Sarjapur Road Station">Sarjapur Road Station</option>
+          <option value="Kengeri Station">Kengeri Station</option>
+          <option value="Yelagirinagar Station">Yelagirinagar Station</option>
+          <option value="Mahadevapura Station">Mahadevapura Station</option>
+          <option value="Hosakote Station">Hosakote Station</option>
+          <option value="Attibele Station">Attibele Station</option>
+          <!-- Add more destination stations if needed -->
+        </select>
+        <input type="button" value="Calculate" onclick="calculate()" />
+      </div>
+      <div class="results">
+        <h2>Results</h2>
+        <p><b>Fare:</b> <span id="fare"></span></p>
+        <p><b>Route: </b><br /><span id="route"></span></p>
+      </div>
     </div>
-    <div class="results">
-      <h2>Results</h2>
-      <p><b>Fare:</b> <span id="fare"></span></p>
-      <p><b>Route: </b><br><span id="route"></span></p>
-    </div>
-  </div>
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

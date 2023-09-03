@@ -1,116 +1,124 @@
 /* Reset some default styles */
-body, h1, h2, p, label, select, input {
-    margin: 10px;
-    padding: 10px;
-  }
-  
-  /* Apply some basic styles to the container */
+body,
+h1,
+h2,
+p,
+label,
+select,
+input {
+  margin: 10px;
+  padding: 10px;
+}
+
+/* Apply some basic styles to the container */
+.container {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffdee9;
+  background-image: linear-gradient(209deg, #ffdee9 0%, #b5fffc 100%);
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Style the form */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+select,
+input[type='button'] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input[type='button'] {
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+input[type='button']:hover {
+  background-color: #0056b3;
+}
+
+/* Style the results section */
+.results {
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+span {
+  font-weight: bold;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Adjust styles for screens smaller than 768px */
+@media (max-width: 768px) {
   .container {
-    font-family: Arial, sans-serif;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #FFDEE9; 
-    background-image: linear-gradient(209deg, #FFDEE9 0%, #B5FFFC 100%);
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  h1 {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 20px;
-  }
-  
-  /* Style the form */
-  .form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  label {
-    font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 5px;
-  }
-  
-  select, input[type="button"] {
     padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+    max-width: 100%;
   }
-  
-  input[type="button"] {
-    cursor: pointer;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  input[type="button"]:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Style the results section */
-  .results {
-    margin-top: 20px;
-  }
-  
-  h2 {
-    font-size: 18px;
+
+  h1 {
+    font-size: 24px;
     margin-bottom: 10px;
   }
-  
-  span {
-    font-weight: bold;
+
+  label {
+    font-size: 14px;
+    margin-bottom: 3px;
   }
-  
-  /* Media Queries for Responsiveness */
-  
-  /* Adjust styles for screens smaller than 768px */
-  @media (max-width: 768px) {
-    .container {
-      padding: 10px;
-      max-width: 100%;
-    }
-    
-    h1 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-    
-    label {
-      font-size: 14px;
-      margin-bottom: 3px;
-    }
-    
-    select, input[type="button"] {
-      font-size: 14px;
-      padding: 8px;
-      margin-bottom: 8px;
-    }
+
+  select,
+  input[type='button'] {
+    font-size: 14px;
+    padding: 8px;
+    margin-bottom: 8px;
   }
-  
-  /* Adjust styles for screens smaller than 480px */
-  @media (max-width: 480px) {
-    h1 {
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
-    
-    label {
-      font-size: 12px;
-      margin-bottom: 3px;
-    }
-    
-    select, input[type="button"] {
-      font-size: 12px;
-      padding: 6px;
-      margin-bottom: 6px;
-    }
+}
+
+/* Adjust styles for screens smaller than 480px */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
   }
-  
+
+  label {
+    font-size: 12px;
+    margin-bottom: 3px;
+  }
+
+  select,
+  input[type='button'] {
+    font-size: 12px;
+    padding: 6px;
+    margin-bottom: 6px;
+  }
+}
