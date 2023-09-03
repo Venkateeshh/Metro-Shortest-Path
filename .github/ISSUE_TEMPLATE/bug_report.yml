@@ -15,7 +15,7 @@ body:
         A clear and concise description of what the bug is...
     validations:
       required: true
-      
+
   - type: textarea
     attributes:
       label: To Reproduce
@@ -42,7 +42,7 @@ body:
       label: Additional Context
       placeholder: >-
         Any other context or considerations about the bug...
-      
+
   - type: textarea
     attributes:
       label: Screenshots
@@ -55,5 +55,5 @@ body:
       label: Is there an existing issue for this?
       description: Please search to see if an issue already exists for the bug you encountered.
       options:
-      - label: I have searched the existing issues
-        required: true
+        - label: I have searched the existing issues
+          required: true
